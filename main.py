@@ -125,8 +125,3 @@ def categories():
             return json.dumps(default_categories, indent=2)
     except Exception as e:
         return f'{{"error": "Could not load categories: {str(e)}"}}'
-
-# Start the server
-if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=8000)
-    # mcp.run()
